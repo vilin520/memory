@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="system/common::html">
+    <meta charset="UTF-8">
+    <title>测试一下</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <div class="container">
+        <h2>按钮样式</h2>
+        <button type="button" class="btn">基本按钮</button>
+        <button type="button" class="btn btn-primary">主要按钮</button>
+        <button type="button" class="btn btn-secondary">次要按钮</button>
+        <button type="button" class="btn btn-success">成功</button>
+        <button type="button" class="btn btn-info">信息</button>
+        <button type="button" class="btn btn-warning">警告</button>
+        <button type="button" class="btn btn-danger">危险</button>
+        <button type="button" class="btn btn-dark">黑色</button>
+        <button type="button" class="btn btn-light">浅色</button>
+        <button type="button" class="btn btn-link">链接</button>
+        <button type="button" class="btn btn-primary btn-sm btn-block mybutton">按钮 1</button>
+        <button type="button" class="btn btn-default btn-sm btn-block">按钮 2</button>
+        <a href="/memory/demo/index.do">测试</a>
+    </div>
+    <div class="container">
+        <h3>弹出框实例</h3>
+        <a href="#" data-toggle="popover" title="弹出框标题" data-content="弹出框内容" data-placement="top">多次点我</a>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-placement="bottom">Click to toggle popover</button>
+    </div>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+
+        $(function () {
+            $(".mybutton").click(function () {
+                $.ajax({
+                    url:'/memory/demo/index.do',
+                    
+                    success:function () {
+                        window.location.href='/memory/demo/index.do'
+                    },
+                    error:function () {
+                        window.location.href='/memory/demo/vion.do'
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
