@@ -17,4 +17,9 @@ public class DemoController {
         return "index";
     }
 
+    @RequestMapping(value = "test.do")
+    public String test(){
+        return "index";
+    }
+
 }
