@@ -22,4 +22,9 @@ public class DemoController {
         return "index";
     }
 
+    @RequestMapping(value = "demo.do")
+    public String demo(){
+        return "index";
+    }
+
 }
