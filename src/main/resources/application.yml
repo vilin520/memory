@@ -1,0 +1,14 @@
+
+#配置thymeleaf
+  spring:
+    thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+      mode: HTML5
+      servlet:
+        content-type: text/html
+      cache : false
+#配置根目录spring:
+    mvc:
+        static-path-pattern: /**
+
