@@ -10,5 +10,5 @@
       cache : false
 #配置根目录spring:
     mvc:
-        static-path-pattern: /**
+        static-path-pattern: /static/**
 
